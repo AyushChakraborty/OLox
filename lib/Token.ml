@@ -13,6 +13,11 @@ type literal =
 	| NumberLit of float
 	| NoneLit
 
+let literal_to_string = function 
+	| StringLit str -> str
+	| NumberLit num -> string_of_float num
+	| NoneLit -> "None"
+	
 let token_type_to_string = function
 	| LEFT_PAREN -> "LEFT_PAREN"
 	| RIGHT_PAREN -> "RIGHT_PAREN"
